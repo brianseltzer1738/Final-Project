@@ -1,25 +1,17 @@
-import pygame, sys
-from pygame.locals import*
-FPS = 200
-windowidth = 400
-windowhight = 300
-def main():
-    pygame.init()
-    global DISPLAYSURF
-    
-    FPSCLOCK = pygame.time.Clock()
-    DISPLAYSURF = pygame.display.set_mode((windowwith,windowhight))
-    pyhame.display.set_caption('Pong')
-    
-    while True: #main game loop
-        for event in pygame.event.get():
-            if event.type == QUIT:
-                pygame.quit()
-                sys.exit()
 
-        pygame.display.update()
-        FPSclock.tick(FPS)
+myapp = App()
+myapp.run()
+from ggame import App, Color, LineStyle, Sprite
+from ggame import RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
 
-if __name__=='__main__':
-    main()
+# Three primary colors with no transparency (alpha = 1.0)
+red = Color(0xff0000, 1.0)
+green = Color(0x00ff00, 1.0)
+blue = Color(0x0000ff, 1.0)
+black = Color(0x000000, 1.0)
+orange = Color(0xffa500, 1.0)
 
+# Define a line style that is a thin (1 pixel) wide black line
+thinline = LineStyle(1, black)
+# A graphics asset that represents a rectangle
+rectangle = RectangleAsset(300, 200, thinline, green)
