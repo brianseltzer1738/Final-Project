@@ -1,15 +1,14 @@
-
 import pygame, sys
 from pygame.locals import*
-FPS=200
-windowidth=400
-windowhight=300
+FPS = 200
+windowidth = 400
+windowhight = 300
 def main():
     pygame.init()
     global DISPLAYSURF
     
-    FPSclock=pygame.time.clock()
-    DISPLAYSURF=pygame.display.set_mode((windowwith,windowhight))
+    FPSCLOCK = pygame.time.Clock()
+    DISPLAYSURF = pygame.display.set_mode((windowwith,windowhight))
     pyhame.display.set_caption('Pong')
     
     while True: #main game loop
